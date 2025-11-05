@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="./images/earth.png" type="image/x-icon" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Product Details</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <nav id="navBar" class="section">
+        <a href="/"><h2 class="navLeft">ULS World LLC</h2></a>
+        <div class="navRight">
+          <ul class="navigationLinks" id="navigationLinks">
+            <li>
+              <span id="hamburgerClose"><i class="fa-solid fa-xmark"></i></span>
+            </li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#products">Products</a></li>
+            <li><a href="/#terms">Terms</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+          <span id="hamburger"><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Product details -->
+      <section class="section" id="productDetails">
+        <h1 id="productHeading"></h1>
+        <div class="detailsTop">
+          <div class="detailsImage">
+            <img id="productImageSingle" src="" alt="product title" />
+          </div>
+          <div class="detailsAction">
+            <p class="productPrice">
+              Price: $<span id="productPriceSingle">0</span>
+            </p>
+            <div class="productDetailsAction">
+              <a id="productPreview" href="#" target="_blank"
+                ><button class="btn">
+                  <i class="fa-solid fa-eye"></i> Preview
+                </button></a
+              >
+              <button id="purchaseBtn" class="btn">
+                <i class="fa-solid fa-credit-card"></i> Purchase
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="detailsMain">
+          <div class="detailsDesc">
+            <h2>Product Description</h2>
+            <p id="productDescriptionSingle"></p>
+          </div>
+          <div class="detailsDesc">
+            <h2>Features</h2>
+            <div id="featuresContainer">
+              <!-- <p>✅ Single Product E-commerce Landing page</p>
+              <p>✅ Single Product E-commerce Landing page</p> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Popup -->
+      <!-- <div id="popup">
+        <div class="detailsForm">
+          <form action="" method="post" id="contactForm">
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+              "
+            >
+              <span id="popupClose"><i class="fa-solid fa-xmark"></i></span>
+            </div>
+            <h2>Fill out this form</h2>
+            <div class="formElement">
+              <label for="name">Name*</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+            <div class="formElement">
+              <label for="email">Email*</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="formElement">
+              <label for="address">Email*</label>
+              <input
+                type="text"
+                name="address"
+                placeholder="Enter your email"
+                required
+              />
+            </div>
+            <div class="formElement">
+              <label for="message">Have any question?</label>
+              <textarea
+                name="message"
+                id=""
+                placeholder="Write here"
+              ></textarea>
+            </div>
+            <div class="formElement">
+              <button type="submit" class="btn">Confirm</button>
+            </div>
+          </form>
+        </div>
+      </div> -->
+      <!-- Contact -->
+      <section class="section" id="contact">
+        <h1 class="sectionTitle">Contact Us</h1>
+        <div id="contactContainer">
+          <div class="contactLeft">
+            <h2>Drop a line</h2>
+            <ul>
+              <li>
+                <i class="fa-solid fa-phone"></i
+                ><a href="#">+1 (888) 123-4567</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-location-crosshairs"></i>123 park avenue,
+                New York, NY 10001
+              </li>
+              <li>
+                <i class="fa-solid fa-envelope"></i
+                ><a href="">info@ulsworld.com</a>
+              </li>
+            </ul>
+          </div>
+          <form action="" id="contactForm">
+            <h2>Send Us a message</h2>
+            <div class="formElement">
+              <label for="name">Name*</label>
+              <input type="text" placeholder="Enter your name" />
+            </div>
+            <div class="formElement">
+              <label for="email">Email*</label>
+              <input type="email" placeholder="Enter your email" />
+            </div>
+            <div class="formElement">
+              <label for="message">How can we help?</label>
+              <textarea
+                name="message"
+                id=""
+                placeholder="Write your message here"
+              ></textarea>
+            </div>
+            <div class="formElement">
+              <button type="button" class="btn">Submit Request</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer style="padding: 10px">
+      <p style="text-align: center">Copyright © 2025. All Rights Reserved.</p>
+    </footer>
+    <!-- js -->
+    <script src="./script.js"></script>
+    <script src="./script2.js"></script>
+  </body>
+</html>
