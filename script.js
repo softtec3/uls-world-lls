@@ -1,14 +1,19 @@
 const hamburger = document.getElementById("hamburger");
 const hamburgerClose = document.getElementById("hamburgerClose");
 const navigationLinks = document.getElementById("navigationLinks");
-
+const navLinks = document.querySelectorAll(".navLink");
 hamburger.addEventListener("click", () => {
   navigationLinks.style.transform = "translateX(0)";
 });
 hamburgerClose.addEventListener("click", () => {
   navigationLinks.style.transform = "translateX(100%)";
 });
-
+navLinks &&
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navigationLinks.style.transform = "translateX(100%)";
+    });
+  });
 const products = [
   {
     id: 1,

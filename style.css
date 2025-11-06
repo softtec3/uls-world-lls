@@ -406,7 +406,7 @@ hr {
   #navBar .navigationLinks {
     transform: translateX(100%);
     flex-direction: column;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     background-color: var(--themeColor);
@@ -426,6 +426,7 @@ hr {
   }
   #contactForm {
     max-width: 100%;
+    padding: 20px;
   }
   .product {
     height: 700px;
