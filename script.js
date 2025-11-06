@@ -18,30 +18,50 @@ navLinks &&
 const products = [
   {
     id: 1,
-    name: "Single product landing page (Front-end)",
+    name: "Single Vendor E-commerce Site (Front-End)",
     price: 150,
     image: "./images/product1.jpeg",
     live: "https://sites.soft-techtechnologyllc.com/singlelandingpage/",
-    description: "",
-    features: [],
+    description:
+      "A modern, responsive single-vendor e-commerce front-end designed for small to medium businesses. Built with HTML, CSS, and JavaScript, featuring a dynamic interface and smooth user experience across devices.",
+    features: [
+      "Responsive and mobile-friendly layout",
+      "Modern design using Tailwind CSS",
+      "SEO-optimized front-end structure",
+    ],
   },
   {
     id: 2,
-    name: "Single product landing page (Front-end & Backend)",
+    name: "Single Vendor E-commerce Site (Front-End & Backend)",
     price: 220,
     image: "./images/product1.jpeg",
     live: "https://sites.soft-techtechnologyllc.com/singlelandingpage/",
-    description: "",
-    features: [],
+    description:
+      "A complete single-vendor e-commerce website with both front-end and backend integration. Includes admin dashboard for product management, order tracking, and customer data management.",
+    features: [
+      "Full CRUD functionality for products and categories",
+      "Admin dashboard with authentication",
+      "Order management and invoice generation",
+      "Integrated payment gateway (demo setup)",
+      "Responsive user interface and dynamic backend",
+      "Built with HTML, CSS, JavaScript, and PHP/MySQL",
+    ],
   },
   {
     id: 3,
     name: "Multi product landing page (Front-end)",
     price: 200,
     image: "./images/product2.jpeg",
-    live: "",
-    description: "",
-    features: [],
+    live: "https://sites.soft-techtechnologyllc.com/multiproductslandingpage/",
+    description:
+      "A multi-product landing page designed to showcase multiple items under one brand or campaign. Perfect for marketing different product lines with smooth scrolling and call-to-action sections.",
+    features: [
+      "Clean and attractive design for product promotion",
+      "Multiple product sections with highlights",
+      "Interactive sliders and animations",
+      "Optimized for conversions and lead capture",
+      "Responsive and lightweight front-end code",
+    ],
   },
   {
     id: 4,
@@ -49,8 +69,15 @@ const products = [
     price: 320,
     image: "./images/product2.jpeg",
     live: "https://sites.soft-techtechnologyllc.com/multiproductslandingpage/",
-    description: "",
-    features: [],
+    description:
+      "A dynamic multi-product landing page with a complete backend system for managing products, leads, and analytics. Admin panel included for easy content updates and campaign tracking.",
+    features: [
+      "Admin panel for managing product content",
+      "Lead form submissions with database storage",
+      "Dynamic product loading and filtering",
+      "Real-time analytics dashboard (basic)",
+      "Fully responsive and fast-loading interface",
+    ],
   },
   {
     id: 5,
@@ -58,8 +85,16 @@ const products = [
     price: 320,
     image: "./images/product3.jpeg",
     live: "https://sites.soft-techtechnologyllc.com/ghotok-bd/",
-    description: "",
-    features: [],
+    description:
+      "A complete matrimony platform with user registration, matchmaking algorithm, and admin management features. Comes with front-end and backend source code ready for customization.",
+    features: [
+      "User registration and profile creation",
+      "Matchmaking system based on preferences",
+      "Private messaging between users",
+      "Admin panel for user and subscription management",
+      "Photo verification and secure login system",
+      "Developed using PHP, MySQL",
+    ],
   },
   {
     id: 6,
@@ -67,8 +102,16 @@ const products = [
     price: 500,
     image: "./images/product4.jpeg",
     live: "https://front.nano-techbd.com/",
-    description: "",
-    features: [],
+    description:
+      "A complete multi-vendor e-commerce platform front-end with separate sections for vendors and customers. Built with modern UI and scalable architecture ready for backend integration.",
+    features: [
+      "Multi-vendor product listing layout",
+      "Vendor registration and storefront design",
+      "Dynamic shopping cart and checkout flow",
+      "Advanced search and filter options",
+      "Wishlist and customer review sections",
+      "Fully responsive with optimized performance",
+    ],
   },
   {
     id: 7,
@@ -77,10 +120,14 @@ const products = [
     image: "./images/product4.jpeg",
     live: "https://front.nano-techbd.com/",
     description:
-      "This project is a singl-product e-commerce landing page with a front-end and an admin dashboard, all built using HTML, Tailwind CSS, and JavaScript. The front-end offers a smooth shopping experience with responsive product listings and a shopping cart, while the integrated dashboard provides a streamlined interface for managing products and orders.",
+      "A full multi-vendor e-commerce system including both website setup and management panel. Ideal for launching an online marketplace with full operational support.",
     features: [
-      "✅ Single Product E-commerce Landing page",
-      "✅ Single Product E-commerce Landing page",
+      "Vendor and admin dashboards with role management",
+      "Product, order, and payment management systems",
+      "Integrated live chat and notifications",
+      "Payment gateway setup (SSLCommerz/bKash ready)",
+      "Multi-language and multi-currency support",
+      "Full setup and deployment service included",
     ],
   },
   {
@@ -89,10 +136,19 @@ const products = [
     price: 1000,
     image: "./images/product5.jpeg",
     live: "https://timevision24.com/",
-    description: "",
-    features: [],
+    description:
+      "A professional online news portal with a full setup including admin panel, categories, reporters' panel, and live news updates. Perfect for digital publishers and media organizations.",
+    features: [
+      "Admin dashboard with article and user management",
+      "Reporter and editor access levels",
+      "Category-based news filtering",
+      "Breaking news ticker and live update sections",
+      "SEO and social media sharing integration",
+      "Full deployment and configuration support",
+    ],
   },
 ];
+
 // show products
 // loop on products container
 const productsContainer = document.getElementById("productsContainer");
@@ -120,7 +176,7 @@ if (productsContainer) {
                     <i class="fa-solid fa-eye"></i> View
                   </button></a
                 >
-                <button class="btn">
+                <button class="btn" onclick="handlePurchase(${product?.id})">
                     <i class="fa-solid fa-credit-card"></i> Purchase
                   </button>
               </div>
@@ -128,3 +184,14 @@ if (productsContainer) {
           </div>`;
     });
 }
+
+// refund popup
+const refundPopupCloseBtn = document.getElementById("refundPopupCloseBtn");
+const refundPopup = document.getElementById("refundPopup");
+
+const handleRefundPopup = () => {
+  refundPopup.style.display = "block";
+};
+refundPopupCloseBtn.addEventListener("click", () => {
+  refundPopup.style.display = "none";
+});

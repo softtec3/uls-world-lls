@@ -6,7 +6,7 @@
     <!-- css -->
     <link rel="stylesheet" href="./style.css" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="./images/earth.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./images/square.jpg" type="image/x-icon" />
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,7 +28,14 @@
     <!-- Navbar -->
     <header>
       <nav id="navBar" class="section">
-        <a href="/"><h2 class="navLeft">ULS World LLC</h2></a>
+        <a href="#"
+          ><div class="navLeft">
+            <img
+              class="logo"
+              src="./images/wide2.jpg"
+              alt="ULS WORLD LLC"
+            /></div
+        ></a>
         <div class="navRight">
           <ul class="navigationLinks" id="navigationLinks">
             <li>
@@ -38,6 +45,9 @@
             <li class="navLink"><a href="/#about">About</a></li>
             <li class="navLink"><a href="/#products">Products</a></li>
             <li class="navLink"><a href="/#terms">Terms</a></li>
+            <li class="navLink">
+              <a href="#" onclick="handleRefundPopup()">Refund Policy</a>
+            </li>
             <li class="navLink"><a href="/#contact">Contact</a></li>
           </ul>
           <span id="hamburger"><i class="fa-solid fa-bars"></i></span>
@@ -82,6 +92,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Contact -->
       <section class="section" id="contact">
         <h1 class="sectionTitle">Contact Us</h1>
         <div id="contactContainer">
@@ -90,15 +102,15 @@
             <ul>
               <li>
                 <i class="fa-solid fa-phone"></i
-                ><a href="#">+1 (888) 123-4567</a>
+                ><a href="tel:+1 (240) 367-1766">+1 (240) 367-1766</a>
               </li>
               <li>
-                <i class="fa-solid fa-location-crosshairs"></i>123 park avenue,
-                New York, NY 10001
+                <i class="fa-solid fa-location-crosshairs"></i> 620 Blandford
+                Street, Rockville, MD 20850 USA
               </li>
               <li>
                 <i class="fa-solid fa-envelope"></i
-                ><a href="">info@ulsworld.com</a>
+                ><a href="mailto:info@ulsworldllc.com">info@ulsworldllc.com</a>
               </li>
             </ul>
           </div>
@@ -126,7 +138,92 @@
           </form>
         </div>
       </section>
+      <!-- Floating Chat -->
+      <div id="floatingChat">
+        <span id="floatingChatCloseBtn"><i class="fa-solid fa-xmark"></i></span>
+        <form id="floatingChatFom">
+          <div class="formElement">
+            <label for="name">Name*</label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your name here"
+              required
+            />
+          </div>
+          <div class="formElement">
+            <label for="email">Email*</label>
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email here"
+              required
+            />
+          </div>
+          <div class="formElement">
+            <label for="address">Address*</label>
+            <input
+              type="text"
+              name="address"
+              placeholder="Enter your address here"
+              required
+            />
+          </div>
+          <div class="formElement">
+            <label for="query">Query*</label>
+            <textarea
+              name="query"
+              placeholder="Write your question here"
+            ></textarea>
+          </div>
+          <div class="formElement">
+            <button type="submit" class="btn" style="cursor: pointer">
+              Start Chat
+            </button>
+          </div>
+        </form>
+        <div id="floatingChatContent" style="display: none">
+          <!-- this will repeat for chats -->
+          <div class="chatContentContainer">
+            <div class="chatContentLeftContainer">
+              <!-- this chatContentLeft/RightContent repeat for extra message -->
+              <div class="chatContentLeftContent">Hi Jack!</div>
+              <div class="chatContentLeftContent">How are you?</div>
+            </div>
+            <div class="chatContentRightContainer">
+              <!-- this chatContentLeft/RightContent repeat for extra message -->
+              <div class="chatContentRightContent">I'm fine</div>
+              <div class="chatContentRightContent">
+                What about you? How your day?
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="questionContainer">
+          <div class="singleQuestion">How are your?</div>
+        </div>
+      </div>
     </main>
+    <!-- Refund popup -->
+    <div id="refundPopup">
+      <span id="refundPopupCloseBtn"><i class="fa-solid fa-xmark"></i></span>
+      <h3>Refund Policy</h3>
+      <p style="margin-top: 10px; font-size: 15px">
+        As our company provides digital products and services, all sales are
+        deemed final upon successful delivery. <br /><br />
+
+        However, customers may request a refund within 24 (twenty-four) hours of
+        completing their payment, provided that the product or service has not
+        yet been delivered, activated, or accessed. <br /><br />
+
+        Once the digital product has been delivered or the 24-hour period has
+        expired—whichever occurs first—the transaction shall be considered
+        non-refundable. <br /><br />
+
+        Our company reserves the right to verify all refund claims to ensure
+        compliance with this policy before processing any refund.
+      </p>
+    </div>
     <footer style="padding: 10px">
       <p style="text-align: center">
         Copyright © 2025. All Rights Reserved.
@@ -135,6 +232,7 @@
     </footer>
     <!-- js -->
     <script src="./script.js"></script>
+    <script src="./chatBoxScript.js"></script>
     <script src="./script2.js"></script>
   </body>
 </html>

@@ -84,7 +84,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 20px 0;
 }
 #navBar .navigationLinks {
   display: flex;
@@ -114,6 +114,13 @@ header {
   font-size: 20px;
   display: none;
   cursor: pointer;
+}
+.logo {
+  width: 150px;
+  height: 100%;
+  border-radius: 3px;
+  /* height: 30px; */
+  object-fit: cover;
 }
 /* Banner */
 #banner {
@@ -412,6 +419,7 @@ hr {
   padding: 10px;
   transition: all 0.5s;
   overflow-y: auto;
+  display: none;
 }
 #floatingChat::-webkit-scrollbar {
   width: 0px;
@@ -460,9 +468,11 @@ hr {
 }
 .chatContentLeftContent,
 .chatContentRightContent {
-  width: 50%;
+  width: auto;
+  max-width: 90%;
   font-size: 14px;
   padding: 8px;
+  margin-bottom: 10px;
 }
 .chatContentLeftContent {
   border-top-left-radius: 20px;
@@ -472,10 +482,50 @@ hr {
 }
 .chatContentRightContent {
   border-top-right-radius: 20px;
-  background-color: black;
+  /* background-color: black; */
   border: 1px solid var(--themeBorder);
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+}
+.questionContainer {
+  width: 100%;
+  border-top: 1px solid var(--themeBorder);
+  margin-top: 20px;
+  padding: 10px 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.singleQuestion {
+  font-size: 14px;
+  padding: 4px 10px;
+  background-color: var(--themeBase);
+  border-radius: 20px;
+  cursor: pointer;
+}
+/* refund popup */
+#refundPopup {
+  width: 400px;
+  height: auto;
+  background: url("./images/sectionbackground.png"), var(--themeBgMain);
+  border: 1px solid var(--themeBorder);
+  border-radius: 10px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  padding: 20px;
+  color: white;
+  display: none;
+}
+#refundPopupCloseBtn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  cursor: pointer;
 }
 /* Responsive part */
 @media screen and (max-width: 1400px) {
@@ -487,6 +537,10 @@ hr {
   .section {
     width: 100%;
     padding: 0 10px;
+  }
+  #navBar {
+    padding-left: 5px;
+    padding-right: 5px;
   }
   #navBar .navigationLinks {
     transform: translateX(100%);
