@@ -9,6 +9,7 @@ hamburgerClose.addEventListener("click", () => {
   navigationLinks.style.transform = "translateX(100%)";
 });
 navLinks &&
+  window.innerWidth < 1200 &&
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       navigationLinks.style.transform = "translateX(100%)";
